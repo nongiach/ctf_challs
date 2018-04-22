@@ -16,7 +16,7 @@ mipsel_breizh2k18 $ nc 127.0.0.1 4242
 BabyHttp brought to you by @chaign_c
 ```
 
-tips: use arm_now tool to debug a mips programm https://github.com/nongiach/arm_now
+tips: use arm_now tool to debug a mips program https://github.com/nongiach/arm_now
 
 Writeups:
 
