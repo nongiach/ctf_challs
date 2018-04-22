@@ -1,7 +1,10 @@
 # Easy_mips
 name: easy_mips
+
 desc: A basic stack buffer overflow on mips cpu. you are given the binary, the source code and the host:port.
+
 point: 400 and pwn 4 times
+
 ctf: breizhctf.com
 
 You can easily deploy the challenge by starting ./docker.sh, it will setup everything using docker.
