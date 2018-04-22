@@ -5,7 +5,7 @@ desc: A basic stack buffer overflow on mips cpu. you are given the binary, the s
 
 point: 400 and pwn 4 times
 
-ctf: breizhctf.com
+ctf: https://breizhctf.com
 
 You can easily deploy the challenge by starting ./docker.sh, it will setup everything using docker.
 
