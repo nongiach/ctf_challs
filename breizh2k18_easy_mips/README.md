@@ -25,8 +25,6 @@ Writeups:
 | [Aperikube](https://twitter.com/AperiKube) | http://www.aperikube.fr/docs/breizhctf_2018_mips/ |
 | [gov](https://twitter.com/govlog) | https://0bin.net/paste/TAOFEXebo71Lq6Es#VsAR6+5aqycYxg3C4YgQ1K5BjoUfUPayhEltlLWiBqi |
 
-I will be releasing two pwn challenge per month from now on, stay tunned. (one easy chall and a hard one).
-
 ----
 By [@chaign\_c][] [#HexpressoTeam][hexpresso].
 
