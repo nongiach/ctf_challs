@@ -1,0 +1,10 @@
+voir qu'il s'agit d'un binaire go non strippé.
+nm binaire | grep cmp
+mettre un breakpoint dans la fonction "runtime.cmpstring".
+
+b runtime.cmpstring
+on voit la string avec la comparaison est faite.
+On se rend vite compte que les caractères sont hashés 2 par 2.
+hash(deux charactères ab) => md5(ab)[:2]
+solution 1: faire un dico des toutes les possibilités de hash. (65535 possibilité, 32639 si on prend que ce qui est affichable)
+solution 2: bf les caractères deux par deux.
