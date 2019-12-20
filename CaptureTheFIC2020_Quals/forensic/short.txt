@@ -1,0 +1,19 @@
+fdisk -l extradisk.raw
+# we see start => 128 and secort size is 512
+# so start is => 512 * 128 => 0x10000 => 65536
+
+losetup /dev/loop0 extradisk.raw
+losetup -o 65536 /dev/loop1 /dev/loop0
+dislocker /dev/loop1 -upassword -- /media/bitlocker
+mount -o loop /media/bitlocker/dislocker-file /media/bitlockermount
+
+bulk_extractor /media/bitlocker/dislocker-file -o o/
+
+
+# clean
+umount /media/bitlockermount
+umount /media/bitlocker
+losetup -d /dev/loop1
+losetup -d /dev/loop0
+
+https://hub.docker.com/r/hypnza/misc-binaries

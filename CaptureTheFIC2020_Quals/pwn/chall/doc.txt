@@ -1,0 +1,5 @@
+socat stdio openssl-connect:ctf.hexpresso.fr:4242,cert=client.pem,cafile=server.crt,verify=0
+
+You know the drill, let's pwn the planet.
+
+# Hexpresso / @chaignc

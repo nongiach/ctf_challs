@@ -1,0 +1,38 @@
+user:
+bosal43833
+bosal43833@mailt.top
+
+pass:
+bosal43833@mailt.top
+
+qemu-img create -f raw extradisk.raw 150M
+https://www.suares.com/index.php?page_id=25&news_id=209
+
+
+link to the flag =>
+https://gist.github.com/bosal43833/3e815abc3f92e45963a8aafc8acfe411
+
+losetup /dev/loop0 extradisk.raw
+dislocker /dev/loop0 -upassword -- /media/bitlocker
+
+raw to vmdk
+qemu-img convert -f raw  -O vmdk extradisk.raw image.vmdk
+
+losetup /dev/loop0 image.vmdk
+
+losetup -o 65536 /dev/loop1 /dev/loop0
+dislocker /dev/loop1 -upassword -- /media/bitlocker
+mount -o loop /media/bitlocker/dislocker-file /media/bitlockermount
+
+# ou alors
+# dislocker extradisk.raw -O 65536 -upassword -- /media/bitlocker/
+
+binwalk /media/bitlocker/dislocker-file
+
+
+
+github repo:
+https://github.com/bosal43833/264f074405496b5f1df00b45ef3897c3
+
+L'objectif est d'ouvrir le bitlocker en devinant que le mot de passe est "password", puis ensuite utiliser n'importe quel outil de récupération de fichier supprimé pour trouver un zip contenant l'url du challenge d'après. tout ceci se fait simplement avec sous linux avec dislocker et bulk_extractor.
+
